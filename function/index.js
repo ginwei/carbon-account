@@ -115,13 +115,6 @@ contract.set(date, in_resource, mycalculate, material);
 
 //alert
 	return alert("已經保存！");
-
-contract.search(search_resource).call(function(err, result){
-	if (err) {console.log(err);}
-	if (result) {
-		document.getElementById("dataname").innerHTML = "the" + search_resource + 
-		" factory created " + result[0] + " tons of CO2 in " + result[1];
-});
 }
 
 // Display Candidate Name
