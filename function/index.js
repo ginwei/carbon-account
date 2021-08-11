@@ -1,5 +1,4 @@
-document.write('<script language=javascript src="../function/web3.js"></script>');
-console.log(web3.eth.accounts)
+document.write('<script language=javascript src="../function/web3.js"></script>'); 
 
 // get the current time 
 var today = new Date();
@@ -8,10 +7,10 @@ today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds;
 
 
 //get the formCarbonEmission data
-const submitBtn = document.querySelector('#button_formCarbonEmission');
-submitBtn.addEventListener("click", processFormData);
+const submitBtn = document.getElementById("button_formCarbonEmission");
+submitBtn.addEventListener('click', processFormData);
 
-function processFormData(_e) {
+function processFormData() {
   //取得 name 屬性為 form 的表單
   const form = document.forms['formCarbonEmission'];
   //取 elements 集合中 name 屬性為 @@ 的值
@@ -19,11 +18,11 @@ function processFormData(_e) {
   const resource = form.elements.resource.value;
   const mycalculate = form.elements.mycalculate.value;
 
-//save the data
-contract.set(date, in_resource, mycalculate, material);
+	//save the data
+	contract.set(date, resource, mycalculate, material);
 
-//alert
-	return alert("已經保存！");
+	//alert
+	alert("已經保存！");
 }
 
 // Display Candidate Name
