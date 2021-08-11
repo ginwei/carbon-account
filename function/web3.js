@@ -1,16 +1,17 @@
 // Initialize Web3
-if (typeof web3 !== 'undefined') {
+var web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
+/* if (typeof web3 !== 'undefined') {
     web3 = new Web3(web3.currentProvider);
 } 
 else {
     web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
-}
+} */
 
 // Set Account
 web3.eth.defaultAccount = web3.eth.accounts[0];
 
 // Set Contract Abi
-let contractAbi = [
+var ABI = [
 	{
 		"constant": true,
 		"inputs": [
@@ -63,7 +64,7 @@ let contractAbi = [
 ];
 
 // Set Contract Address
-let contractAddress = '0x78951Cb3FD57Fc64255dE31562423E7512fc649C'; // Add Your Contract address here!!!
+var contractAddress = '0x0BE49F7eE2144803696e97BD9DbaB082D0630d97'; // Add Your Contract address here!!!
 
 // Set the Contract
-let contract = web3.eth.contract(contractAbi).at(contractAddress);
+var contract = web3.eth.contract(ABI).at(contractAddress);
