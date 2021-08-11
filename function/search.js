@@ -1,5 +1,5 @@
 
-/* document.write('<script language=javascript src="../function/web3.js"></script>'); */
+document.write('<script language=javascript src="../function/web3.js"></script>'); 
 
 //get the formCarbonEmission data
 function showCompanyResultLineChart() {
