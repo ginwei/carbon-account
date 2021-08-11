@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Candiates</title>
+    <!--include css files here-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div class="container-sm mt-5" style="width: 50%;">
+
+      <div class="row mb-3">
+        <h1 class="text-center">Carbon Account</h1>
+      </div>
+
+          
+      <div class="col-10 m-auto">
+        <form action="./home.html" id="formCarbonEmission" name="formCarbonEmission" novalidate>
+
+          <div class="input-group mb-3 row">
+            <label for="material">Input the weight of the steel(material)</label>
+            <input class="form-control" id="material" name="material" required></input>
+            <div class="invalid-feedback">Please input the weight！</div>
+          </div>
+
+          <div class="input-group mb-3 row">
+            <label for="resource">Input the name of the factory</label>
+            <input class="form-control" id="resource" name="resource" required></input>
+            <div class="invalid-feedback">Please input the factory！</div>
+          </div>
+
+          <div class="input-group mb-3 row">
+            <label for="mycalculate">Choose the calculation:</label>
+            <input class="form-control" list="calculations" id="mycalculate" name="mycalculate" required></label>
+            <datalist id="calculations">
+              <option value="calculation a">
+              <option value="calculation b">
+            </datalist>
+            <div class="invalid-feedback">Please choose the calculation！</div>
+          </div>
+
+          <div style="text-align: center;">
+            <button id= "submit" class="btn btn-primary" id="button_formCarbonEmission">Save</button>
+            <a href="./home.html" class="btn btn-primary">Back</a>
+          </div>
+        </form>
+      </div>
+      
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="../function/index.js"></script>
+
+    <script>
+      const form = document.querySelector('form')
+      const submitButton = document.querySelector('#submit')
+
+      submitButton.addEventListener('click', function onSubmitButtonClicked(event){
+        form.classList.add('was-validated')
+      })
+
+      form.addEventListener('submit', function onFormSubmit(event){
+        if(!form.checkValidity()){
+          event.preventDefault()
+          event.stopPropagation()
+        }
+      })
+  </script>
+
+  </body>
+</html>
