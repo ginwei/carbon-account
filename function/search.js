@@ -8,12 +8,20 @@ function showCompanyResultLineChart() {
 
   companyResultLineChart.innerHTML = `<h4>Company Results</h4>`;
 
-  contract.search(input_company, function(error, result){
+  contract.search.call(input_company).then(console.log);
+  
+/*   function(error, result){
 	if (error) {console.log(error);}
 	if (result) {
 		companyResultLineChart.innerHTML = "the" + input_company + 
 		" factory created " + result[0] + " tons of CO2 in " + result[1];}
-  });
-
+  }); */
 }
 
+myContract.getValueAtMapping.call(userAddress)
+    .(then(function(tester) {
+          console.log("Tester", tester);
+ })
+ .catch(function(err) {
+          console.error("problem getting tester", err);
+ });
