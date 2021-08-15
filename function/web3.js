@@ -1,21 +1,43 @@
 // Initialize Web3
-var web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
-/* if (typeof web3 !== 'undefined') {
-    web3 = new Web3(web3.currentProvider);
-} 
-else {
-    web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:7545'));
-} */
+var web3 = new Web3('http://localhost:7545');
 
 // Set Account
-web3.eth.defaultAccount = web3.eth.accounts[0];
+web3.eth.defaultAccount = '0x16E15b184F39c4fBE1A4B29052CE018c5748610B';
 
 // Set Contract Abi
 var ABI = [
 	{
-		"constant": true,
 		"inputs": [
 			{
+				"internalType": "string",
+				"name": "input_time",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "input_source",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "input_mycalculate",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "input_material",
+				"type": "uint256"
+			}
+		],
+		"name": "saveData",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
 				"name": "input_source",
 				"type": "string"
 			}
@@ -23,48 +45,36 @@ var ABI = [
 		"name": "search",
 		"outputs": [
 			{
+				"internalType": "uint256",
 				"name": "",
 				"type": "uint256"
 			},
 			{
+				"internalType": "string",
 				"name": "",
 				"type": "string"
 			}
 		],
-		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
-		"constant": false,
-		"inputs": [
+		"inputs": [],
+		"name": "test",
+		"outputs": [
 			{
-				"name": "input_time",
+				"internalType": "string",
+				"name": "",
 				"type": "string"
-			},
-			{
-				"name": "input_source",
-				"type": "string"
-			},
-			{
-				"name": "input_mycalculate",
-				"type": "string"
-			},
-			{
-				"name": "input_material",
-				"type": "uint256"
 			}
 		],
-		"name": "set",
-		"outputs": [],
-		"payable": false,
-		"stateMutability": "nonpayable",
+		"stateMutability": "view",
 		"type": "function"
 	}
 ];
 
 // Set Contract Address
-var contractAddress = '0x0BE49F7eE2144803696e97BD9DbaB082D0630d97'; // Add Your Contract address here!!!
+var contractAddress = '0x4c25DA37bcB97d976B2Cd905E8016E5A0E6A4BCC'; // Add Your Contract address here!!!
 
 // Set the Contract
-var contract = web3.eth.contract(ABI).at(contractAddress);
+var contract = new web3.eth.Contract(ABI, contractAddress);
