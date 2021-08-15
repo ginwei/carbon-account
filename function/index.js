@@ -22,7 +22,7 @@ function processFormData() {
 	//save the data
 	contract.methods.saveData(date, resource, mycalculate, material).send(
 		{from:web3.eth.defaultAccount}
-	)//this function isn't work
+	)
 	
 	//alert
 	alert("saved!");

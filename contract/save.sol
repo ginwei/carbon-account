@@ -14,7 +14,7 @@ contract Storage{
     
     function test() public view returns(string memory) {
         return b;
-    }
+    }//test
 
     function saveData(string memory input_time, string memory input_source, string memory input_mycalculate, uint input_material) public returns (uint){
         users[input_source].time = input_time;
@@ -23,7 +23,7 @@ contract Storage{
         else
             users[input_source].emission = input_material * 5 / 2;//solidity isn't support integer
 
-        return 123;
+        return 123;//test
     }
     
     function search(string memory input_source) public view returns (uint, string memory) {
