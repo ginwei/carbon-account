@@ -10,20 +10,14 @@ contract Storage{
         string source;
         uint emission;
     }
-    mapping (string => UserInfo) users;
-    
-    function test() public view returns(string memory) {
-        return b;
-    }//test
+    mapping (string => UserInfo) public users;
 
-    function saveData(string memory input_time, string memory input_source, string memory input_mycalculate, uint input_material) public returns (uint){
+    function saveData(string memory input_time, string memory input_source, string memory input_mycalculate, uint input_material) public {
         users[input_source].time = input_time;
         if (keccak256(abi.encodePacked(input_mycalculate)) == keccak256(abi.encodePacked(b)))
             users[input_source].emission = input_material * 3 / 2;//solidity isn't support integer
         else
             users[input_source].emission = input_material * 5 / 2;//solidity isn't support integer
-
-        return 123;//test
     }
     
     function search(string memory input_source) public view returns (uint, string memory) {
