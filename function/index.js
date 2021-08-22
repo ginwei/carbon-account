@@ -1,4 +1,4 @@
-document.write('<script language=javascript src="../function/web3.js"></script>');
+document.write('<script language=javascript src="../function/web3.js" async></script>');
 
 // get the current time 
 var today = new Date();
@@ -20,7 +20,7 @@ function processFormData() {
 	const mycalculate = form.elements.mycalculate.value;
 
 	//save the data
-	contract.methods.saveData(date, resource, mycalculate, material).send(
+	contract.methods.saveData(date, resource, mycalculate, material, '').send(
 		{from:web3.eth.defaultAccount}
 	)
 	

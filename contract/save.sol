@@ -23,4 +23,6 @@ contract Storage{
     function search(string memory input_source) public view returns (uint, string memory) {
         return (users[input_source].emission, users[input_source].time);
     }
+
+
 }

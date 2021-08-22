@@ -2,7 +2,7 @@
 var web3 = new Web3('http://localhost:7545');
 
 // Set Account
-web3.eth.defaultAccount = '0x16E15b184F39c4fBE1A4B29052CE018c5748610B';
+web3.eth.defaultAccount = '0x6b89a8a4130BD1d0b4e514EA217d11a527C8C3FB';
 
 // Set Contract Abi
 var ABI = [
@@ -27,35 +27,34 @@ var ABI = [
 				"internalType": "uint256",
 				"name": "input_material",
 				"type": "uint256"
-			}
-		],
-		"name": "saveData",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "input_source",
-				"type": "string"
-			}
-		],
-		"name": "search",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
 			},
 			{
 				"internalType": "string",
-				"name": "",
+				"name": "search_source",
 				"type": "string"
 			}
 		],
-		"stateMutability": "view",
+		"name": "saveData",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "time",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "emission",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct Storage.UserInfo",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -74,11 +73,6 @@ var ABI = [
 				"type": "string"
 			},
 			{
-				"internalType": "string",
-				"name": "source",
-				"type": "string"
-			},
-			{
 				"internalType": "uint256",
 				"name": "emission",
 				"type": "uint256"
@@ -87,10 +81,10 @@ var ABI = [
 		"stateMutability": "view",
 		"type": "function"
 	}
-];
+]
 
 // Set Contract Address
-var contractAddress = '0xD9914252198e86E76C1389FBA3751974569200d1'; // Add Your Contract address here!!!
+var contractAddress = '0xD7d1c998101ea2fa8d445f6347F8f70A357324a4';
 
 // Set the Contract
 var contract = new web3.eth.Contract(ABI, contractAddress);
