@@ -1,0 +1,214 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+.v8_107 {
+  width: 100%;
+  height: 900px;
+  background: url("../picture/pexels-pixabay-220201.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.4;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.v4_31 {
+  width: 469px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 286px;
+  left: 98px;
+  font-family: Roboto;
+  font-weight: Bold;
+  font-size: 96px;
+  opacity: 1;
+  text-align: left;
+  z-index: 1000;
+}
+.v5_91 {
+  width: 526px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 466px;
+  left: 818px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: right;
+}
+.v5_80 {
+  width: 256px;
+  height: 70px;
+  background: url("../images/v5_80.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 135px;
+  left: 318px;
+  overflow: hidden;
+}
+.v8_108 {
+  width: 100%;
+  height: 900px;
+  background-image: url("../picture/pexels-picography-4700.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.3;
+  position: absolute;
+  top: 900px;
+  left: 0px;
+  overflow: hidden;
+  z-index: -1;
+}
+.v5_77 {
+  width: 585px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 981px;
+  left: 86px;
+  font-family: Roboto;
+  font-weight: Light;
+  font-size: 64px;
+  opacity: 1;
+  text-align: left;
+}
+.form1 {
+  width: 574px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 1400px;
+  left: 800px;
+  overflow: hidden;
+}
+.v5_87 {
+  width: 411px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: left;
+}
+.v5_86 {
+  width: 574px;
+  height: 58px;
+  opacity: 0.5;
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  overflow: hidden;
+}
+.v5_85 {
+  width: 89px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 110px;
+  left: -7px;
+  font-family: Roboto;
+  font-weight: Bold;
+  font-size: 24px;
+  opacity: 1;
+  text-align: left;
+}
+
+.v8_109 {
+  width: 100%;
+  height: 900px;
+  background: url("../picture/pexels-andrea-piacquadio-3768894.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.3;
+  position: absolute;
+  top: 1800px;
+  left: 0px;
+  overflow: hidden;
+  z-index: -1;
+}
+.v5_94 {
+  width: 538px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 1900px;
+  left: 807px;
+  font-family: Roboto;
+  font-weight: Light;
+  font-size: 64px;
+  opacity: 1;
+  text-align: right;
+}
+.form2 {
+  width: 574px;
+  height: 205px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 2329px;
+  left: 86px;
+  overflow: hidden;
+}
+.v5_101 {
+  width: 113px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 21px;
+  left: 72px;
+  font-family: Roboto;
+  font-weight: Bold;
+  font-size: 24px;
+  opacity: 1;
+  text-align: left;
+}
+.v5_103 {
+  width: 411px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 24px;
+  opacity: 1;
+  text-align: left;
+}
+.v5_102 {
+  width: 574px;
+  height: 40px;
+  opacity: 0.5;
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  overflow: hidden;
+}
+.v5_96 {
+  width: 256px;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  font-weight: Bold;
+  opacity: 1;
+  position: absolute;
+  top: 100px;
+  left: -83px;
+  overflow: hidden;
+}
+

@@ -13,7 +13,7 @@
     <div class="container-sm mt-5" style="width: 50%;">
 
       <div class="row mb-3">
-        <h1 class="text-center">Carbon Account</h1>
+        <h2 class="text-center">calculate and save it</h2>
       </div>
 
           
@@ -21,8 +21,19 @@
         <form action="./home.html" id="formCarbonEmission" name="formCarbonEmission" novalidate> <!--  -->
 
           <div class="input-group mb-3 row">
-            <label for="material">Input the weight of the steel(material)</label>
-            <input class="form-control" id="material" name="material" required></input>
+            <label for="category">Choose the material:</label>
+            <input class="form-control" list="categories" id="category" name="category" required>
+            <datalist id="categories">
+              <option value="Crude oil">
+              <option value="Diesel oil">
+              <option value="Fuel oil">
+            </datalist>
+            <div class="invalid-feedback">Please choose the material！</div>
+          </div>
+          
+          <div class="input-group mb-3 row">
+            <label for="weight">Input the weight of the material</label>
+            <input class="form-control" id="weight" placeholder="the unit is ton" name="weight" required>
             <div class="invalid-feedback">Please input the weight！</div>
           </div>
 
@@ -37,7 +48,6 @@
             <input class="form-control" list="calculations" id="mycalculate" name="mycalculate" required></label>
             <datalist id="calculations">
               <option value="Standard method">
-              <option value="Mass balance">
               <option value="Continuous Measurement">
             </datalist>
             <div class="invalid-feedback">Please choose the calculation！</div>
@@ -70,7 +80,7 @@
     </div>
     
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
-    <script src="../function/index.js"></script>
+    <script src="../function/save_oil.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"

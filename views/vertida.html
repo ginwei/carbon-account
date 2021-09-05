@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="./main.css" rel="stylesheet" type="text/css">
+        <title>Document</title>
+    </head>
+    
+    <body>
+        <div class="all">
+            <div class="first_part">
+                <div class="v8_107"></div>
+                <span class="v4_31">Be one part of the ETS</span>
+                <span class="v5_91">The most efficient way to manage the emission of your supply chain.</span>
+            </div>
+
+            <div class="second_part">
+                <div class="v8_108"></div>
+                <span class="v5_77">Save your carbon footprint in the easiest way</span>
+                <div class="form1">
+                    <form id="formsaveIndustry" name="formsaveIndustry">
+                        
+                        <span class="v5_87">choose the category of company</span>
+                        <div class="v5_86">
+                            <input class="form-control" list="indus_categories" id="indus_category" name="indus_category" required>
+                            <datalist id="indus_categories">
+                            <option value="chemistry industry">
+                            <option value="oil industry">
+                            <option value="steel industry">
+                            </datalist>
+                            <div class="invalid-feedback">Please choose the industry！</div>
+                        </div>
+                    </form>
+                    
+                    <div style="text-align: center;" class="v5_85">
+                        <button type="submit" class="btn btn-primary" id="button_formsaveIndustry">save it</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="third_part">
+                <div class="v8_109"></div>
+                <span class="v5_94">Search emission of the supply chain </span>
+                
+                <div class="form2">
+                    <span class="v5_103">input the name of company,and get the result of the company</span>
+
+                    <div style="text-align: center;" class="v5_96">
+                        <a class="btn btn-primary" id="button_formsearchIndustry" href="./search.html?company">
+                            search it</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        //script for second_part
+        const form1 = document.querySelector('#formsaveIndustry')
+        const submitButton1 = document.querySelector('#button_formsaveIndustry')
+        
+        submitButton1.addEventListener('click', function onSubmitButtonClicked(event){
+            form1.classList.add('was-validated')
+        })
+        
+        form1.addEventListener('submit', function onFormSubmit(event){
+            if(!form.checkValidity()){
+                event.preventDefault()
+                event.stopPropagation()
+            }
+        })
+    </script>
+
+    <script src="../function/vertida.js"></script>
+
+</body>
+</html>
