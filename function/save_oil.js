@@ -21,12 +21,12 @@ function processFormData() {
 	const mycalculate = form.elements.mycalculate.value;
 
 	//save the data
-	if (category == "Crude oil") material = 0.1;
-	if (category == "Diesel oil") material = 0.2;
-	if (category == "Fuel oil") material = 0.3;
-	contract.methods.saveStandard(category, weight, date, resource).send(
-		{from:web3.eth.defaultAccount}
-	)
+	if (category == "Crude oil") material = 1; //cause of solidity, the 1 here represents 0.1
+    if (category == "Diesel oil") material = 2; //0.2
+    if (category == "Fuel oil") material = 3; //0.3
+    contract.methods.saveStandard(category, weight, date, resource).send(
+        {from:web3.eth.defaultAccount}
+    )
 	
 	//alert
 	alert("saved!");

@@ -16,7 +16,15 @@ function FormDataIndustry() {
 	var categoryIndus = form1.elements.indus_category.value;
 
 	//save the data
-	if (categoryIndus == "chemistry industry"){window.location.href="../views/save_chemistry.html";} 
-	if (categoryIndus == "oil industry"){window.location.href="../views/save_oil.html";}
-	if (categoryIndus == "steel industry"){window.location.href="../views/save_chemistry.html";}
+	if (categoryIndus == "chemistry industry"){window.location.href="../views/chemistry_calculate.html";} 
+	if (categoryIndus == "oil industry"){window.location.href="../views/oil_calculate.html";}
+	if (categoryIndus == "steel industry"){window.location.href="../views/chemistry_calculate.html";}
 }
+
+//回上頁時重新整理
+if(window.name != "fresh"){
+	location.reload();
+	window.name = "fresh";
+ }else{
+	window.name = "";
+ }

@@ -212,3 +212,87 @@ body {
   overflow: hidden;
 }
 
+.title {
+  color: rgba(0,0,0,1);
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 48px;
+  opacity: 1;
+}
+
+/* search.html */
+.backgroundsearch {
+  width: 100%;
+  height: 900px;
+  background: url("../picture/search.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.4;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+
+/* save_chemistry */
+.backgroundchemistry {
+  width: 100%;
+  height: 900px;
+  background: url("../picture/chemistry.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* save_oil */
+.backgroundoil {
+  width: 100%;
+  height: 900px;
+  background: url("../picture//oil.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/*save_measurement*/
+.backgroundmeasurement {
+  width: 100%;
+  height: 900px;
+  background: url("../picture//oil.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  z-index: -1;
+}
+.spinners {
+  position: absolute;
+  top: 30%;
+  left: 47%;
+}
+.buttonmeasue {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+
+  opacity: 1;
+}
