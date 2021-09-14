@@ -1,15 +1,6 @@
 // Initialize Web3
-/* var web3 = new Web3('https://remix.ethereum.org'); */
-if (window.ethereum != null) {
-	state.web3 = new Web3(window.ethereum)
-	try {
-	  // Request account access if needed
-		await window.ethereum.enable()
-	  // Acccounts now exposed
-	} catch (error) {
-	  // User denied account access...
-	}
-}
+var Web3 = require('web3');
+var web3 = new Web3("https://localhost:8545");
 
 // Set Account
 web3.eth.defaultAccount = '0x5B38Da6a701c568545dCfcB03FcB875f56beddC4';
@@ -198,18 +189,8 @@ var ABI = [
 		"name": "users",
 		"outputs": [
 			{
-				"internalType": "string",
-				"name": "time",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "source",
-				"type": "string"
-			},
-			{
 				"internalType": "uint256",
-				"name": "emission",
+				"name": "index",
 				"type": "uint256"
 			}
 		],

@@ -1,4 +1,4 @@
-document.write('<script language=javascript src="../function/web3.js" async></script>');
+document.write('<script language=javascript src="../function/bundleweb3.js" async></script>');
 
 // get the current time 
 var today = new Date();
