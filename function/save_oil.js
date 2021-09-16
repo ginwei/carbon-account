@@ -1,6 +1,4 @@
-document.write('<script language=javascript src="../function/bundleweb3.js" async></script>');
-
-// get the current time 
+// get the current time
 var today = new Date();
 var date = today.getFullYear()+'-' + (today.getMonth()+1) + '-' + today.getDate() + '-'
 today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds;
@@ -18,16 +16,16 @@ function processFormData() {
 	var category = form.elements.category.value;
 	const weight = form.elements.weight.value;
 	const resource = form.elements.resource.value;
-	const mycalculate = form.elements.mycalculate.value;
+	var material;
 
 	//save the data
-	if (category == "Crude oil") material = 1; //cause of solidity, the 1 here represents 0.1
-    if (category == "Diesel oil") material = 2; //0.2
-    if (category == "Fuel oil") material = 3; //0.3
-    contract.methods.saveStandard(category, weight, date, resource).send(
-        {from:web3.eth.defaultAccount}
-    )
-	
-	//alert
-	alert("saved!");
+	if (category === "Crude oil") material = 1; //cause of solidity, the 1 here represents 0.1
+    if (category === "Diesel oil") material = 2; //0.2
+    if (category === "Fuel oil") material = 3; //0.3
+
+	contract.methods.saveStandard(material, weight, date, resource).send(
+		{from: web3.eth.defaultAccount}
+	);
+
+	alert("the material is " + material);
 }

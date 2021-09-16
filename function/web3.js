@@ -1,9 +1,8 @@
 // Initialize Web3
-var Web3 = require('web3');
-var web3 = new Web3("https://localhost:8545");
+var web3 = new Web3("HTTP://127.0.0.1:7545");
 
 // Set Account
-web3.eth.defaultAccount = '0x5B38Da6a701c568545dCfcB03FcB875f56beddC4';
+web3.eth.defaultAccount = '0x91345e10F3D4992A9A70277DD2a07E3d935824C6';
 
 // Set Contract Abi
 var ABI = [
@@ -41,23 +40,7 @@ var ABI = [
 			}
 		],
 		"name": "saveMass",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
+		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
@@ -85,23 +68,7 @@ var ABI = [
 			}
 		],
 		"name": "saveMeasurement",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
+		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
@@ -129,28 +96,7 @@ var ABI = [
 			}
 		],
 		"name": "saveStandard",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			},
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
+		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
@@ -189,8 +135,18 @@ var ABI = [
 		"name": "users",
 		"outputs": [
 			{
+				"internalType": "string",
+				"name": "time",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "source",
+				"type": "string"
+			},
+			{
 				"internalType": "uint256",
-				"name": "index",
+				"name": "emission",
 				"type": "uint256"
 			}
 		],
@@ -200,7 +156,7 @@ var ABI = [
 ];
 
 // Set Contract Address
-var contractAddress = '0xd9145CCE52D386f254917e481eB44e9943F39138';
+var contractAddress = '0x5A3a3E287288835e3a14E51B6F85986417a75451';
 
 // Set the Contract
 var contract = new web3.eth.Contract(ABI, contractAddress);
