@@ -1,8 +1,8 @@
 // Initialize Web3
-var web3 = new Web3("HTTP://127.0.0.1:7545");
+window.web3 = new Web3(web3.currentProvider);
 
 // Set Account
-web3.eth.defaultAccount = '0x91345e10F3D4992A9A70277DD2a07E3d935824C6';
+window.web3.eth.defaultAccount = '0x9437Ca35f1DBa6e0a2C80ff638B1903ef0315c5F';
 
 // Set Contract Abi
 var ABI = [
@@ -156,7 +156,7 @@ var ABI = [
 ];
 
 // Set Contract Address
-var contractAddress = '0xD9440328BbeF75C9A589Bc4B38Cea36bAcaEdE1D';
+var contractAddress = '0x434aC61de7876a21a2fc2A099Fe630F53DBE575b';
 
 // Set the Contract
-var contract = new web3.eth.Contract(ABI, contractAddress);
+var contract = new window.web3.eth.Contract(ABI, contractAddress);

@@ -27,5 +27,5 @@ function processFormData() {
 		{from: web3.eth.defaultAccount}
 	);
 
-	alert("the material is " + material);
+	alert("the data of " + resource + " is saved!");
 }

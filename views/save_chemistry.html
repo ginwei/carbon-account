@@ -20,14 +20,14 @@
 
           
       
-        <form action="./vertida.html" id="formCarbonEmission_chem" name="formCarbonEmission_chem" novalidate> <!--  -->
+        <form action="./vertida.html" id="formCarbonEmission_chem" name="formCarbonEmission_chem" novalidate> <!--"  -->
           
           <div class="row g-3">
 
             <div class="col-md-6">
             <label for="material">The weight of source material</label>
               <div class="input-group mb-3">
-                <input class="form-control" id="chemsource_material_weight" placeholder="the unit is ton" required>
+                <input class="form-control" id="chemsource_material_weight" name="chemsource_material_weight" placeholder="the unit is ton" required>
                 <div class="invalid-feedback">Please input the weight！</div>
               </div>
             </div>
@@ -35,7 +35,7 @@
             <div class="col-md-6">
             <label for="material">The carbon content of source material</label>
               <div class="input-group mb-3">
-                <input class="form-control" id="chemsource_material_carbon" placeholder="%" required>
+                <input class="form-control" id="chemsource_material_carbon" name="chemsource_material_carbon" placeholder="%" required>
                 <div class="invalid-feedback">Please input the carbon content！</div>
               </div>
             </div>
@@ -47,7 +47,7 @@
             <div class="col-md-6">
             <label for="material">The weight of outgoing material</label>
               <div class="input-group mb-3">
-                <input class="form-control" id="chemout_material_weight" placeholder="the unit is ton" required>
+                <input class="form-control" id="chemout_material_weight" name="chemout_material_weight" placeholder="the unit is ton" required>
                 <div class="invalid-feedback">Please input the weight！</div>
               </div>
             </div>
@@ -55,7 +55,7 @@
             <div class="col-md-6">
             <label for="material">The carbon content of outgoing material</label>
               <div class="input-group mb-3">
-                <input class="form-control" id="chemout_material_carbon" placeholder="%" required>
+                <input class="form-control" id="chemout_material_carbon" name="chemout_material_carbon" placeholder="%" required>
                 <div class="invalid-feedback">Please input the carbon content！</div>
               </div>
             </div>
@@ -107,7 +107,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
-    <script src="../function/web3.js"></script>
+    <script src="../function/web3rinkeby.js"></script>
     <script src="../function/save_chemistry.js"></script>
 
   </body>
