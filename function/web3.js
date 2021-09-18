@@ -106,6 +106,11 @@ var ABI = [
 				"internalType": "string",
 				"name": "input_source",
 				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
 			}
 		],
 		"name": "search",
@@ -135,18 +140,8 @@ var ABI = [
 		"name": "users",
 		"outputs": [
 			{
-				"internalType": "string",
-				"name": "time",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "source",
-				"type": "string"
-			},
-			{
 				"internalType": "uint256",
-				"name": "emission",
+				"name": "index",
 				"type": "uint256"
 			}
 		],
@@ -156,7 +151,7 @@ var ABI = [
 ];
 
 // Set Contract Address
-var contractAddress = '0xD9440328BbeF75C9A589Bc4B38Cea36bAcaEdE1D';
+var contractAddress = '0xADA41942d2A3cA00e88C49Cc14411E2e5854c4ea';
 
 // Set the Contract
 var contract = new web3.eth.Contract(ABI, contractAddress);
