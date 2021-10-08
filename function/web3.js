@@ -151,7 +151,7 @@ var ABI = [
 ];
 
 // Set Contract Address
-var contractAddress = '0xADA41942d2A3cA00e88C49Cc14411E2e5854c4ea';
+var contractAddress = '0xa50Dce1813E51a70a747dc8FBa1f0aA8AA3BAc7b';
 
 // Set the Contract
 var contract = new web3.eth.Contract(ABI, contractAddress);

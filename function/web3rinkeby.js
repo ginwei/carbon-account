@@ -1,8 +1,8 @@
 // Initialize Web3
-window.web3 = new Web3(web3.currentProvider);
+const web3 = new Web3("https://besu-test0714-8c0d16ddd9-node-f3b1da55.baas.twcc.ai");
 
 // Set Account
-window.web3.eth.defaultAccount = '0x9437Ca35f1DBa6e0a2C80ff638B1903ef0315c5F';
+web3.eth.defaultAccount = '0xacA6C18CCc3f6AeCB127B47209f66B71e93D9781';
 
 // Set Contract Abi
 var ABI = [
@@ -156,7 +156,7 @@ var ABI = [
 ];
 
 // Set Contract Address
-var contractAddress = '0x434aC61de7876a21a2fc2A099Fe630F53DBE575b';
+var contractAddress = '0x7be62268f30571f877dFFb6cfA05e8362cDF5A95';
 
 // Set the Contract
-var contract = new window.web3.eth.Contract(ABI, contractAddress);
+var contract = new web3.eth.Contract(ABI, contractAddress);
